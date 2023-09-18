@@ -1,0 +1,14 @@
+# base.html
+
+{% block page_title %}
+    Add New Post
+{% endblock %}
+
+{% block content %}
+    <h3>Add new post</h3>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+{% endblock %}
